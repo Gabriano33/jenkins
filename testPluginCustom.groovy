@@ -1,4 +1,4 @@
-@Library('akeron-library@master') 
+@Library('pippo-library@master') 
 
 //funzione ricorsiva che recupera tutti i progetti associati a un gruppo, compresi quelli nei sottogruppi.
 //Costruisce l'URL per interrogare l'API di GitLab e ottenere i sottogruppi associati a GROUP_ID.
