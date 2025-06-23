@@ -73,7 +73,7 @@ def getListaProject(API_GITLAB_URL, GROUP_ID, listaProjectMap){
 def errorLog = ''
 def branchScelto = 'develop'
 def groupId = params.groupId // ID del gruppo GitLab (che contiene progetti e sottogruppi)
-def emailTo = 'AK-LAB-SviluppoProgetti@akeron.com'
+def emailTo = 'mail.com'
 def branchCompile = params.branchCompile ?: 'develop'
 def listaProjectMap = [:]
 def listaCsproj = [:]
@@ -81,7 +81,7 @@ def token = ''
 
 
 def NEW_VERSION = '1.8.0'
-def API_GITLAB_URL = 'https://akeron-gitlab.akeron.com/api/v4'
+def API_GITLAB_URL = 'https://indirizzo.com/api/v4'
 def PROJECT_ID = ''
 def PRIVATE_TOKEN = ''
 // Variabili per il clone (ad es. URL SSH configurato nella libreria)
