@@ -1,10 +1,10 @@
-@Library('akeron-library@master') _
+@Library('paperino-library@master') _
 
 // Variabili globali di configurazione
 def errorLog = ''
 def branchScelto = 'develop'
 def groupId = params.groupId // ID del gruppo GitLab (che contiene progetti e sottogruppi)
-def emailTo = 'AK-LAB-SviluppoProgetti@akeron.com'
+def emailTo = 'email.com'
 
 def NEW_VERSION = "2.0.0"
 def API_GITLAB_URL = 'https://.com/api/v4'
