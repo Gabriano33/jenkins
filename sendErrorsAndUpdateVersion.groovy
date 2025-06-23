@@ -4,10 +4,10 @@
 def errorLog = ''
 def branchScelto = 'develop'
 def groupId = params.groupId // ID del gruppo GitLab (che contiene progetti e sottogruppi)
-def emailTo = 'AK-LAB-SviluppoProgetti@akeron.com'
+def emailTo = ''
 
 def NEW_VERSION = "2.0.0"
-def API_GITLAB_URL = 'https://akeron-gitlab.akeron.com/api/v4'
+def API_GITLAB_URL = 'https://prova.com/api/v4'
 def PROJECT_ID = "439"
 
 // Variabili per il clone (ad es. URL SSH configurato nella libreria)
@@ -104,13 +104,13 @@ pipeline {
                             for (def file in csprojFiles) {
                                 echo "Aggiornamento del file: ${file}"
                                 sh """
-                                    sed -i 's/<PackageReference Include="Tarko\\.Abstractions" Version="[^"]*"/<PackageReference Include="Tarko.Abstractions" Version="${NEW_VERSION}"/g' "${file}"
+                                    sed -i 's/<PackageReference Include="o\\.Abstractions" Version="[^"]*"/<PackageReference Include="o.Abstractions" Version="${NEW_VERSION}"/g' "${file}"
                                 """
                                 sh """
-                                    sed -i 's/<PackageReference Include="Tarko\\.Domain" Version="[^"]*"/<PackageReference Include="Tarko.Domain" Version="${NEW_VERSION}"/g' "${file}"
+                                    sed -i 's/<PackageReference Include="o\\.Domain" Version="[^"]*"/<PackageReference Include="o.Domain" Version="${NEW_VERSION}"/g' "${file}"
                                 """
                                 sh """
-                                    sed -i 's/<PackageReference Include="Tarko\\.CoreDomain" Version="[^"]*"/<PackageReference Include="Tarko.CoreDomain" Version="${NEW_VERSION}"/g' "${file}"
+                                    sed -i 's/<PackageReference Include="o\\.CoreDomain" Version="[^"]*"/<PackageReference Include="o.CoreDomain" Version="${NEW_VERSION}"/g' "${file}"
                                 """
                             }
                             
